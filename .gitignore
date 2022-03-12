@@ -1,0 +1,12 @@
+*.log
+npm-debug.log*
+yarn-error.log
+
+node_modules/
+/coverage
+/out
+/sample_data
+.idea/
+
+/.vscode/settings.json
+/config/*
