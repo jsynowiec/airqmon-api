@@ -12,11 +12,15 @@ Install the dependencies by running `yarn` and then run `yarn run build` to comp
 
 # Deploy
 
-The easiest way to deploy and run the Airqmon server components is to use [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true#deploy-the-app) or any other PaaS that uses [Heroku buildpacks](https://devcenter.heroku.com/articles/buildpacks) for deployment.
+The easiest way to deploy and run the Airqmon server components is to use a PaS provider like [Railway](https://docs.railway.app/deploy/nodejs), [Render](https://render.com/docs/migrate-from-heroku), [Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true#deploy-the-app) or any other PaaS that supports [Node.js buildpack](https://devcenter.heroku.com/articles/buildpacks) for deployment.
 
 If you want a self-hosted solution, check [Dokku](https://dokku.com/docs/deployment/application-deployment/). To simplify the setup, you can use the [DigitalOcean 1-Click App with Dokku](https://marketplace.digitalocean.com/apps/dokku).
 
-Whatever you choose, you will also need a MongoDB database to cache the sensor stations and measurements. MongoDB Atlas integrates easily with Heroku applications, and Dokku has an excellent [plugin](https://github.com/dokku/dokku-mongo) for managing a self-hosted MongoDB database.
+## MongoDB
+
+Whatever you choose, you will also need a MongoDB database to cache the sensor stations and measurements.
+
+Render allows running MongoDB as a [private service](https://render.com/docs/deploy-mongodb), Railway to add a MongoDB [service](https://docs.railway.app/databases/mongodb), MongoDB Atlas integrates easily with Heroku applications, and Dokku has an excellent [plugin](https://github.com/dokku/dokku-mongo) for managing a self-hosted MongoDB database.
 
 ## Cron Job Monitoring
 
